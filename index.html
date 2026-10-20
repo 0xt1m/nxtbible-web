@@ -4,20 +4,393 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://api.github.com ws://localhost:5173" />
+    <!-- Home-screen copies of the reader were saved with this address: send them straight to it. -->
+    <script src="./standalone-redirect.js"></script>
+
+    <title>nxtbible — Free Desktop Bible App for Mac, Windows &amp; Linux</title>
+    <meta name="description" content="A free, offline Bible app for Mac, Windows and Linux. Compare the KJV, WEB, BSB and more side by side, with cross-references, Greek and Hebrew, and notes." />
+    <link rel="canonical" href="https://nxtbible.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Tymofii Matviiv" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="nxtbible" />
+    <meta property="og:url" content="https://nxtbible.com/" />
+    <meta property="og:title" content="nxtbible — the free desktop Bible" />
+    <meta property="og:description" content="Read, compare and study the Bible offline on Mac, Windows and Linux, or in your browser. Free, with no account." />
+    <meta property="og:image" content="https://nxtbible.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="nxtbible showing John 1 with the Greek words of the selected verse" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="nxtbible — the free desktop Bible" />
+    <meta name="twitter:description" content="Read, compare and study the Bible offline on Mac, Windows and Linux, or in your browser." />
+    <meta name="twitter:image" content="https://nxtbible.com/og-image.jpg" />
+
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <!-- Home-screen icon and name (iOS uses apple-touch-icon; Android reads the manifest) -->
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="nxtbible" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="theme-color" content="#141416" />
-    <title>nxtbible</title>
-    <script type="module" crossorigin src="./assets/index-BMAYyqwf.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-m-hVgZ2c.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://nxtbible.com/#website",
+            "name": "nxtbible",
+            "url": "https://nxtbible.com/"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://nxtbible.com/#developer",
+            "name": "Tymofii Matviiv",
+            "alternateName": "0xt1m",
+            "url": "https://github.com/0xt1m",
+            "sameAs": ["https://github.com/0xt1m", "https://buymeacoffee.com/0xt1m"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "nxtbible",
+            "url": "https://nxtbible.com/",
+            "description": "A free Bible app for reading, comparing and studying Scripture offline on Mac, Windows and Linux, or in a web browser. Includes the KJV, WEB, ASV, BSB and YLT, 338,557 cross-references, and Greek and Hebrew words with a lexicon.",
+            "applicationCategory": "ReferenceApplication",
+            "operatingSystem": "macOS, Windows, Linux, Web",
+            "downloadUrl": "https://github.com/0xt1m/nxtbible-releases/releases/latest",
+            "image": "https://nxtbible.com/og-image.jpg",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "author": { "@id": "https://nxtbible.com/#developer" },
+            "featureList": [
+              "Works offline in the desktop app",
+              "Compare translations side by side with differences marked",
+              "338,557 cross-references from OpenBible.info",
+              "Greek and Hebrew words with Strong's numbers and lexicon entries",
+              "Full-text search and reference jumping",
+              "Notes, highlights and bookmarks with Markdown export",
+              "Import your own MyBible translations"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Is nxtbible free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. nxtbible is free to download and to use in the browser, with no account, ads or subscription. The included translations are in the public domain." } },
+              { "@type": "Question", "name": "Does nxtbible work offline?", "acceptedAnswer": { "@type": "Answer", "text": "The desktop app works fully offline: every translation, cross-reference and lexicon entry is stored on your computer. The web version needs an internet connection." } },
+              { "@type": "Question", "name": "Where are my notes saved?", "acceptedAnswer": { "@type": "Answer", "text": "In the desktop app, notes, highlights and bookmarks are saved to a file on your computer. In the browser they are kept in that browser's site storage, which is erased if you clear your browsing data and can be removed by the browser itself, so export them regularly or use the desktop app." } },
+              { "@type": "Question", "name": "Which Bible translations are included?", "acceptedAnswer": { "@type": "Answer", "text": "The King James Version (KJV), World English Bible (WEB) with footnotes, American Standard Version (ASV), Berean Standard Bible (BSB) and Young's Literal Translation (YLT). The desktop app can also import other translations from MyBible modules." } },
+              { "@type": "Question", "name": "Can I use nxtbible on my phone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The web version has a layout made for phones, and you can add it to your home screen. The downloadable app is for Mac, Windows and Linux." } }
+            ]
+          }
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/home-f1tK6oNz.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="./assets/home-DwHLIyuZ.css">
   </head>
   <body>
-    <div id="root"></div>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="./" aria-label="nxtbible home">
+          <svg width="28" height="28" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="28" fill="#1C1C20" /><rect x="0.5" y="0.5" width="127" height="127" rx="27.5" fill="none" stroke="#2E2E33" /><path d="M48 0h32v92l-16-14-16 14z" fill="#C8A861" /></svg>
+          <span>nxtbible</span>
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#features">Features</a>
+          <a href="#desktop">Desktop app</a>
+          <a href="#translations">Translations</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="nav-support" href="https://buymeacoffee.com/0xt1m" target="_blank" rel="noopener">Support</a>
+          <a class="btn btn-small btn-primary" href="read/">Read</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <p class="eyebrow">Free · No account · Mac, Windows, Linux and the web</p>
+          <h1>The free desktop Bible for Mac, Windows and Linux</h1>
+          <p class="lede">
+            Read, compare and study Scripture in a calm, fast app. Five translations, 338,557 cross-references and the
+            Greek and Hebrew behind every verse, in your browser or offline on your computer.
+          </p>
+          <div class="cta">
+            <a class="btn btn-big btn-primary" href="read/">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z" /><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" /></svg>
+              Read now
+            </a>
+            <a class="btn btn-big btn-outline" id="hero-download" href="#download">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14" /></svg>
+              <span id="hero-download-label">Download the app</span>
+            </a>
+          </div>
+          <p class="cta-note" id="hero-download-note">Free for Mac, Windows and Linux</p>
+
+          <figure class="shot shot-hero">
+            <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <img
+              src="./assets/reader-1120-CF_G2Uhl.jpg"
+              srcset="./assets/reader-1120-CF_G2Uhl.jpg 1120w, ./assets/reader-2240-CvgG114O.jpg 2240w"
+              sizes="(max-width: 1180px) calc(100vw - 32px), 1120px"
+              width="1120"
+              height="700"
+              alt="nxtbible reading John 1 in the Berean Standard Bible, with verse 14 selected and its Greek words in the study panel"
+              fetchpriority="high"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="wrap">
+          <h2 id="features-title">Everything you need to study a passage</h2>
+          <p class="section-lede">Built for reading first, with the study tools one click away instead of in the way.</p>
+          <div class="grid">
+            <article class="card">
+              <h3>Read without distraction</h3>
+              <p>Clean, book-quality type, adjustable text size and line width, and a sidebar that remembers where you have been.</p>
+            </article>
+            <article class="card">
+              <h3>Compare translations</h3>
+              <p>Line translations up side by side or verse by verse. Words that differ are underlined, so every change stands out.</p>
+            </article>
+            <article class="card">
+              <h3>338,557 cross-references</h3>
+              <p>Every verse links to related passages from OpenBible.info, ranked by readers' votes, with the text right there.</p>
+            </article>
+            <article class="card">
+              <h3>Greek and Hebrew</h3>
+              <p>See the original words of each verse with transliteration, Strong's numbers, grammar and a full lexicon entry.</p>
+            </article>
+            <article class="card">
+              <h3>Search and jump</h3>
+              <p>Type “jn 3 16” or “ps 23” to go straight there, or search the whole Bible, with quotes for an exact phrase.</p>
+            </article>
+            <article class="card">
+              <h3>Notes, highlights, bookmarks</h3>
+              <p>Highlight in colour, write notes on any verse, bookmark what matters and export it all as Markdown.</p>
+            </article>
+          </div>
+
+          <div class="showcase">
+            <figure class="shot">
+              <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+              <img
+                src="./assets/compare-720-7c_iqI6J.jpg"
+                srcset="./assets/compare-720-7c_iqI6J.jpg 720w, ./assets/compare-1440-DznC1L2I.jpg 1440w"
+                sizes="(max-width: 900px) calc(100vw - 32px), 720px"
+                width="720"
+                height="450"
+                loading="lazy"
+                alt="Psalm 23 in the KJV, WEB and BSB side by side, with the words that differ underlined"
+              />
+              <figcaption>Psalm 23 in three translations, differences underlined.</figcaption>
+            </figure>
+            <figure class="phone">
+              <img
+                src="./assets/phone-633-CSN2HdGy.jpg"
+                srcset="./assets/phone-633-CSN2HdGy.jpg 292w, ./assets/phone-1266-nIoMX3U3.jpg 585w"
+                sizes="240px"
+                width="292"
+                height="633"
+                loading="lazy"
+                alt="nxtbible on a phone, reading Psalm 23 in the King James Version"
+              />
+              <figcaption>Made for phones too. Add it to your home screen.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="desktop" aria-labelledby="desktop-title">
+        <div class="wrap">
+          <h2 id="desktop-title">Why download the desktop app</h2>
+          <p class="section-lede">
+            The web version has the same reading and study tools. The desktop app adds what a browser can't promise:
+            it works anywhere, and your notes are safely yours.
+          </p>
+
+          <div class="compare-table" role="table" aria-label="Desktop app compared with the browser">
+            <div class="ct-row ct-head" role="row">
+              <span role="columnheader"></span>
+              <span role="columnheader">Desktop app</span>
+              <span role="columnheader">In the browser</span>
+            </div>
+            <div class="ct-row" role="row">
+              <span role="rowheader">Without internet</span>
+              <span role="cell" class="yes">Works fully offline. Every translation, cross-reference and lexicon is on your computer.</span>
+              <span role="cell">Needs a connection</span>
+            </div>
+            <div class="ct-row" role="row">
+              <span role="rowheader">Your notes</span>
+              <span role="cell" class="yes">Saved to a file on your computer</span>
+              <span role="cell">Kept in browser storage, which can be erased</span>
+            </div>
+            <div class="ct-row" role="row">
+              <span role="rowheader">More translations</span>
+              <span role="cell" class="yes">Add your own from MyBible modules</span>
+              <span role="cell">The five included translations</span>
+            </div>
+            <div class="ct-row" role="row">
+              <span role="rowheader">Workspace</span>
+              <span role="cell" class="yes">Its own window, native menus and keyboard shortcuts</span>
+              <span role="cell">A browser tab</span>
+            </div>
+            <div class="ct-row" role="row">
+              <span role="rowheader">Updates</span>
+              <span role="cell" class="yes">Updates itself, and asks first</span>
+              <span role="cell">Always the latest</span>
+            </div>
+            <div class="ct-row" role="row">
+              <span role="rowheader">Price</span>
+              <span role="cell" class="yes">Free</span>
+              <span role="cell">Free</span>
+            </div>
+          </div>
+
+          <aside class="notice" aria-labelledby="notice-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>
+            <div>
+              <h3 id="notice-title">Notes in the browser aren't permanent</h3>
+              <p>
+                In the browser, your notes, highlights and bookmarks live in that browser's storage for this site. Clearing
+                your browsing data deletes them, private windows forget them when closed, and Safari can erase a site's
+                data after seven days without a visit. They also stay in that one browser on that one device.
+              </p>
+              <p>
+                The desktop app saves them to a file on your computer instead. If you read in the browser, use
+                <strong>Notes › Export as Markdown</strong> now and then to keep a copy.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="translations" aria-labelledby="translations-title">
+        <div class="wrap">
+          <h2 id="translations-title">Five translations included, and room for more</h2>
+          <p class="section-lede">All in the public domain and all available offline in the desktop app.</p>
+          <ul class="tl-list">
+            <li><b>KJV</b><span>King James Version</span><em>1769</em></li>
+            <li><b>WEB</b><span>World English Bible, with footnotes</span><em>2000</em></li>
+            <li><b>ASV</b><span>American Standard Version</span><em>1901</em></li>
+            <li><b>BSB</b><span>Berean Standard Bible</span><em>2016</em></li>
+            <li><b>YLT</b><span>Young's Literal Translation</span><em>1898</em></li>
+          </ul>
+          <p class="tl-more">
+            In the desktop app, choose <strong>File › Add Translation…</strong> to import another translation from a
+            MyBible module (.SQLite3). Imported translations stay on your computer.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="download" aria-labelledby="download-title">
+        <div class="wrap">
+          <h2 id="download-title">Download nxtbible</h2>
+          <p class="section-lede" id="download-version">Free for Mac, Windows and Linux.</p>
+          <div class="dl-grid">
+            <article class="dl-card" data-os="mac">
+              <h3>Mac</h3>
+              <p>For Macs with Apple silicon (M1 or later). Signed and notarized by Apple, so it opens with a double-click.</p>
+              <a class="btn btn-primary dl-link" href="https://github.com/0xt1m/nxtbible-releases/releases/latest">Download for Mac</a>
+              <span class="dl-size"></span>
+            </article>
+            <article class="dl-card" data-os="windows">
+              <h3>Windows</h3>
+              <p>For 64-bit Windows 10 or 11. If SmartScreen warns about the installer, choose More info › Run anyway.</p>
+              <a class="btn btn-primary dl-link" href="https://github.com/0xt1m/nxtbible-releases/releases/latest">Download for Windows</a>
+              <span class="dl-size"></span>
+            </article>
+            <article class="dl-card" data-os="linux">
+              <h3>Linux</h3>
+              <p>An AppImage for 64-bit Linux. Make it executable, run it, and it keeps itself up to date.</p>
+              <a class="btn btn-primary dl-link" href="https://github.com/0xt1m/nxtbible-releases/releases/latest">Download for Linux</a>
+              <span class="dl-size"></span>
+            </article>
+          </div>
+          <p class="dl-all"><a href="https://github.com/0xt1m/nxtbible-releases/releases/latest">All downloads and release notes</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="wrap wrap-narrow">
+          <h2 id="faq-title">Questions</h2>
+          <details>
+            <summary>Is nxtbible free?</summary>
+            <p>Yes. nxtbible is free to download and to use in the browser, with no account, ads or subscription. The included translations are in the public domain.</p>
+          </details>
+          <details>
+            <summary>Does it work offline?</summary>
+            <p>The desktop app works fully offline: every translation, cross-reference and lexicon entry is stored on your computer. The web version needs an internet connection.</p>
+          </details>
+          <details>
+            <summary>Where are my notes saved?</summary>
+            <p>In the desktop app, notes, highlights and bookmarks are saved to a file on your computer. In the browser they are kept in that browser's site storage, which is erased if you clear your browsing data and can be removed by the browser itself, so export them regularly or use the desktop app.</p>
+          </details>
+          <details>
+            <summary>Which Bible translations are included?</summary>
+            <p>The King James Version (KJV), World English Bible (WEB) with footnotes, American Standard Version (ASV), Berean Standard Bible (BSB) and Young's Literal Translation (YLT). The desktop app can also import other translations from MyBible modules.</p>
+          </details>
+          <details>
+            <summary>Can I use it on my phone?</summary>
+            <p>Yes. The web version has a layout made for phones, and you can add it to your home screen. The downloadable app is for Mac, Windows and Linux.</p>
+          </details>
+          <details>
+            <summary>Is my data private?</summary>
+            <p>nxtbible has no accounts and no analytics. Your notes stay on your device and are never uploaded. The desktop app only goes online to check for updates.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="about" aria-labelledby="about-title">
+        <div class="wrap about">
+          <div>
+            <h2 id="about-title">Made by an independent developer</h2>
+            <p>
+              nxtbible is designed, built and maintained by Tymofii Matviiv (<a href="https://github.com/0xt1m" rel="me noopener" target="_blank">@0xt1m</a>).
+              It's free, with no ads and no tracking, and it stays that way thanks to the people who support it.
+            </p>
+            <p>If nxtbible helps your reading, a coffee goes a long way toward new features and translations.</p>
+          </div>
+          <div class="about-actions">
+            <a class="btn btn-big btn-coffee" href="https://buymeacoffee.com/0xt1m" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 2v3M12 2v3" /></svg>
+              Buy me a coffee
+            </a>
+            <a class="btn btn-big btn-outline" href="https://github.com/0xt1m" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="./">
+            <svg width="24" height="24" viewBox="0 0 128 128" aria-hidden="true"><rect width="128" height="128" rx="28" fill="#1C1C20" /><rect x="0.5" y="0.5" width="127" height="127" rx="27.5" fill="none" stroke="#2E2E33" /><path d="M48 0h32v92l-16-14-16 14z" fill="#C8A861" /></svg>
+            <span>nxtbible</span>
+          </a>
+          <p>A free Bible for reading and comparing translations.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="read/">Read online</a>
+          <a href="#download">Download</a>
+          <a href="https://github.com/0xt1m/nxtbible-releases/releases" target="_blank" rel="noopener">Releases</a>
+          <a href="https://buymeacoffee.com/0xt1m" target="_blank" rel="noopener">Buy me a coffee</a>
+        </nav>
+        <p class="credits">
+          Texts: scrollmapper/bible_databases and eBible.org (public domain). Cross-references: OpenBible.info (CC BY).
+          Greek and Hebrew: STEPBible.org, Tyndale House Cambridge (CC BY 4.0).
+          <br />© 2026 Tymofii Matviiv
+        </p>
+      </div>
+    </footer>
+
   </body>
 </html>
